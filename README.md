@@ -43,7 +43,7 @@ outputs/results.json every number quoted in the report
 Requirements: Python 3.10+ (tested on 3.12.6, macOS). No GPU needed. A full run takes about 15 seconds.
 
 ```bash
-git clone https://github.com/<your-user>/STAT3013.R11.CTTT_Group10.git
+git clone https://github.com/Langl3y/STAT3013.R11.CTTT_Group10.git
 cd STAT3013.R11.CTTT_Group10
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
@@ -52,6 +52,12 @@ cd src && python run_all.py
 ```
 
 To run a single stage, run e.g. `python s4_sem.py` from inside `src/`.
+
+### Building the documents
+
+- **Full report** (course Word template): edit `report/report_content.md`, then run `report/build.sh`.
+  This needs `pip install python-docx` and LibreOffice (`brew install --cask libreoffice`).
+- **IEEE paper** (LaTeX): `cd paper/ieee && tectonic -X compile main.tex`.
 
 ## Links
 

@@ -10,3 +10,4 @@ outputs_run.log
 *.aux
 *.bbl
 *.blg
+report/out/

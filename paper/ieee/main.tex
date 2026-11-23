@@ -15,10 +15,11 @@
 
 \title{Statistical and Machine Learning Analytics for Patient Value, Satisfaction and Retention in a Private Outpatient Clinic: A Simulation-Based Study}
 
-\author{\IEEEauthorblockN{<YOUR FULL NAME> (Student ID: <ID>)}
-\IEEEauthorblockA{STAT3013 -- Class R11.CTTT, Group 10\\
-<University name>, Ho Chi Minh City, Vietnam\\
-<your.email@student.edu.vn>}}
+\author{\IEEEauthorblockN{Ho Van Hieu}
+\IEEEauthorblockA{Student ID: 19521497 \quad Class: STAT3013.R11.CTTT, Group 10\\
+University of Information Technology, Vietnam National University Ho Chi Minh City\\
+Ho Chi Minh City, Vietnam\\
+19521497@gm.uit.edu.vn}}
 
 \maketitle
 
@@ -280,7 +281,7 @@ The weekly series is non-stationary in level (ADF $p=0.37$) but stationary after
 \centering
 \includegraphics[width=\columnwidth]{f9_acf_pacf.png}
 \caption{ACF and PACF of the first-differenced weekly series.}\label{fig:acf}
-\end{figure} AIC selects ARIMA(2,1,1) with Fourier terms and a Tet dummy; the Tet effect is about $-65$ visits per week. The Ljung--Box test finds no remaining autocorrelation ($p=0.90$ at lag 10). On the 13-week test set (Table~\ref{tab:fc}, Fig.~\ref{fig:fc}), ARIMA achieves a MAPE of 5.8\% and all test points fall inside its 95\% interval, while Holt--Winters is slightly more accurate (4.5\%). Both beat the seasonal naive forecast (19.4\%), which cannot follow the clinic's growth. Refitted on all data, the model forecasts about 4{,}050 visits for Q1 2026, with a dip in Tet week.
+\end{figure} AIC selects ARIMA(2,1,1) with Fourier terms and a Tet dummy; the Tet effect is about $-61$ visits per week. The Ljung--Box test finds no remaining autocorrelation ($p=0.90$ at lag 10). On the 13-week test set (Table~\ref{tab:fc}, Fig.~\ref{fig:fc}), ARIMA achieves a MAPE of 5.8\% and all test points fall inside its 95\% interval, while Holt--Winters is slightly more accurate (4.5\%). Both beat the seasonal naive forecast (19.4\%), which cannot follow the clinic's growth. Refitted on all data, the model forecasts about 4{,}050 visits for Q1 2026, with a dip in Tet week.
 
 \begin{table}[t]
 \caption{Forecast accuracy, last 13 weeks of 2025}\label{tab:fc}
@@ -350,7 +351,7 @@ The data are simulated. This makes ground-truth checks possible, but the effect 
 We built a reproducible pipeline that answers three key questions for a private clinic: who is valuable, what drives satisfaction, and how much demand to expect. It uses descriptive and inferential statistics, a two-part PLV regression, SEM, ARIMA and ML. On simulated data with known effects, every method recovered the true relations closely. Simple, interpretable models such as logistic regression and Holt--Winters performed as well as or better than complex ones. Future work will (1) apply the pipeline to real, anonymised clinic records; (2) add explainable-AI tools such as SHAP values for individual churn explanations; (3) model churn as time-to-event with survival analysis; and (4) audit the models for fairness across age, gender and insurance groups.
 
 \section*{Data and Code Availability}
-All code, data and figures are available at \url{https://github.com/<user>/STAT3013.R11.CTTT_Group10}. The full pipeline runs in under one minute with \texttt{python src/run\_all.py}.
+All code, data and figures are available at \url{https://github.com/Langl3y/STAT3013.R11.CTTT_Group10}. The full pipeline runs in under one minute with \texttt{python src/run\_all.py}.
 
 \section*{AI Usage Statement}
 An AI assistant (Claude, Anthropic) helped write code and draft parts of this paper. The author re-ran all analyses, verified every reported number against the generated output files, and revised the text. Details are given in the accompanying AI Usage Disclosure.
