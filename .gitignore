@@ -11,3 +11,6 @@ outputs_run.log
 *.bbl
 *.blg
 report/out/
+slides/node_modules/
+slides/package-lock.json
+deliverables/

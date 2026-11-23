@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs,tabularx,xcolor}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\pagestyle{empty}
+\newcommand{\todo}[1]{\textcolor{red}{[\textit{#1}]}}
+
+\begin{document}\sloppy
+\begin{center}
+{\Large\bfseries AI Usage Disclosure Statement}\\[3pt]
+STAT3013.R11.CTTT \quad Group 10 \quad Project: \textit{ClinicAnalytics}\\
+Ho Van Hieu (19521497) \quad Date: 23/11/2026
+\end{center}
+
+\noindent\textbf{Tool used.} Claude (Anthropic), model Claude Opus 5.5, used through the Claude Code command-line assistant with access to the project folder. No other generative-AI tool was used.
+
+\medskip\noindent\textbf{What the AI produced.} AI assistance was substantial. I disclose it fully below.
+
+\smallskip
+\begin{tabularx}{\linewidth}{@{}p{3.6cm}X@{}}
+\toprule
+\textbf{Component} & \textbf{AI contribution}\\
+\midrule
+Topic and design & Proposed the simulated-clinic topic and the six-stage design that maps to the course outline. I chose this option from the alternatives offered. \\
+Data & Wrote the data simulator (\texttt{src/simulate.py}). The dataset is synthetic; no real patient data were used. \\
+Analysis code & Wrote the Python code for all six stages, the figures and the build scripts. \\
+Numbers & None typed by hand: every number comes from running the code (\texttt{outputs/results.json}). \\
+IEEE paper, full report & Drafted the structure and the first full text, and the LaTeX/Word formatting. \\
+Slides, demo script & Generated the slide deck and the demo outline. \\
+References & Proposed the reference list from well-known published sources. \\
+\bottomrule
+\end{tabularx}
+
+\medskip\noindent\textbf{Human oversight and my own work.}
+\begin{itemize}
+\item I supplied the course requirements, the naming rules and the faculty report template, and I made the project decisions (topic, scope, single-member team).
+\item I re-ran the full pipeline (\texttt{python src/run\_all.py}) and checked that the results match the report and paper: \todo{confirm once done}.
+\item I rewrote in my own words: \todo{list sections, e.g. Introduction, Discussion, Conclusion of the paper; Chapter I.1, V.8, VI of the report}.
+\item I checked every reference on Google Scholar: \todo{confirm; list any you replaced}.
+\item I recorded and narrated the 15-minute demo video myself.
+\item I can explain every method, assumption and result in the project, as required by the course.
+\end{itemize}
+
+\medskip\noindent\textbf{Checks.} Turnitin similarity: \todo{\_\_\%} (screenshot attached). AI-content detector (\todo{tool name}): \todo{\_\_\%} (screenshot attached). This statement is intended to explain those results honestly, not to minimise them.
+
+\medskip\noindent\textbf{Responsibility.} I take full responsibility for the content submitted. Any errors are mine.
+
+\vfill
+\noindent Signature: \rule{5cm}{0.4pt} \hfill Ho Van Hieu
+\end{document}
