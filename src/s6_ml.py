@@ -79,7 +79,7 @@ def main():
     imp = pd.DataFrame({"mean_auc_drop": imp.importances_mean, "sd": imp.importances_std},
                        index=X_te.columns).sort_values("mean_auc_drop")
     save_table(imp.round(4), "t18_permutation_importance")
-    fig, ax = plt.subplots(figsize=(6.5, 4.2))
+    fig, ax = plt.subplots(figsize=(5, 3.6))
     ax.barh(imp.index, imp.mean_auc_drop, xerr=imp.sd, color="#4C72B0")
     ax.set(title=f"Permutation importance - {best}", xlabel="drop in test AUC when shuffled")
     save_fig(fig, "f13_feature_importance")

@@ -60,7 +60,8 @@ def main():
     ax.set_title("Past visit frequency vs next-year value")
     save_fig(fig, "f3_scatter_freq_plv")
 
-    weekly = visits.set_index("visit_date").resample("W").size()
+    weekly = visits.set_index("visit_date").resample("W-SUN").size()
+    weekly = weekly[(weekly.index >= "2023-01-08") & (weekly.index <= "2025-12-28")]  # complete weeks only
     fig, ax = plt.subplots(figsize=(10, 3.2))
     weekly.plot(ax=ax, color="#4C72B0"); ax.set_title("Weekly visits, 2023-2025"); ax.set_xlabel("")
     save_fig(fig, "f4_weekly_visits")

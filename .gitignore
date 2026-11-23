@@ -7,3 +7,6 @@ outputs_run.log
 *.aux
 *.log
 *.out
+*.aux
+*.bbl
+*.blg

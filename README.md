@@ -1,6 +1,6 @@
 # ClinicAnalytics — Statistics and ML for Patient Value, Satisfaction and Retention in a Private Clinic
 
-STAT3013 course project (2026). Class `QXX`, Group `GroupYY`.
+STAT3013 course project (2026). Class `R11.CTTT`, Group `Group10` (group number to be confirmed).
 
 > **Data notice.** All data in this repository is **simulated**, as the course brief allows. Nothing here describes real patients.
 > Because we wrote the data-generating process ourselves (`src/simulate.py`), the true effects are known,
@@ -43,8 +43,8 @@ outputs/results.json every number quoted in the report
 Requirements: Python 3.10+ (tested on 3.12.6, macOS). No GPU needed. A full run takes about 15 seconds.
 
 ```bash
-git clone https://github.com/<your-user>/STAT3013.QXX_GroupYY.git
-cd STAT3013.QXX_GroupYY
+git clone https://github.com/<your-user>/STAT3013.R11.CTTT_Group10.git
+cd STAT3013.R11.CTTT_Group10
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
