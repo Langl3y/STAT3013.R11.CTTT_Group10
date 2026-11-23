@@ -1,0 +1,19 @@
+,odds_ratio_per_SD_or_level
+cat__main_department_Dental,0.592
+cat__chronic_condition_Yes,0.72
+cat__main_department_Dermatology,0.749
+num__frequency,0.754
+cat__care_programme_Yes,0.759
+cat__main_department_Endocrinology,0.824
+num__avg_wait,0.921
+cat__acquisition_channel_Referral,0.94
+cat__gender_Male,0.949
+num__age,0.951
+num__avg_spend,0.972
+cat__insurance_Yes,0.993
+num__n_departments,1.031
+cat__main_department_General Medicine,1.06
+cat__acquisition_channel_Walk-in,1.113
+num__tenure_days,1.114
+num__monetary,1.137
+num__recency_days,16.052

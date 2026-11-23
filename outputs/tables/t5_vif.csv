@@ -1,0 +1,13 @@
+,VIF
+C(gender)[T.Male],1.02
+C(insurance)[T.Yes],1.36
+C(chronic_condition)[T.Yes],1.44
+C(care_programme)[T.Yes],1.09
+C(acquisition_channel)[T.Referral],1.58
+C(acquisition_channel)[T.Walk-in],1.59
+age,1.14
+log_frequency,3.89
+log_avg_spend,1.44
+recency_months,1.39
+tenure_months,3.65
+avg_wait,1.06

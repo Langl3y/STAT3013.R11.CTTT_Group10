@@ -1,0 +1,17 @@
+,,percent
+gender,Female,54.8
+gender,Male,45.2
+insurance,Yes,65.6
+insurance,No,34.4
+chronic_condition,No,68.6
+chronic_condition,Yes,31.4
+care_programme,No,70.4
+care_programme,Yes,29.6
+acquisition_channel,Walk-in,45.4
+acquisition_channel,Referral,30.9
+acquisition_channel,Online,23.7
+main_department,General Medicine,33.9
+main_department,Dental,17.7
+main_department,Cardiology,17.1
+main_department,Dermatology,17.0
+main_department,Endocrinology,14.3

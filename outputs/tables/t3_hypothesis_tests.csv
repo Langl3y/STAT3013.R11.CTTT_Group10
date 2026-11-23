@@ -1,0 +1,9 @@
+Hypothesis,Test,Statistic,p-value,Effect size,Detail,Decision (alpha=0.05)
+H1 Spend 2024: programme vs not,Welch t,5.627,2.7579755263254463e-08,d=0.37,means 1818 vs 1087,Reject H0
+H1 (robustness),Mann-Whitney U,246922.5,2.8946128672261047e-08,,medians 816 vs 302,Reject H0
+H2 Returned x insurance,Chi-square (df=1),1.583,0.20826444560888566,V=0.02,"return % {'No': 36.1, 'Yes': 38.4}",Fail to reject H0
+H3 Returned x channel,Chi-square (df=2),0.25,0.8823131360156886,V=0.01,"return % {'Online': 37.6, 'Referral': 37.0, 'Walk-in': 38.0}",Fail to reject H0
+H2b Returned x chronic,Chi-square (df=1),72.456,1.7077895487797005e-17,V=0.15,"return % {'No': 32.6, 'Yes': 48.7}",Reject H0
+H4 Wait time across departments,One-way ANOVA,491.582,0.0,eta2=0.073,Levene p=6.43e-92,Reject H0
+H4 (robustness),Kruskal-Wallis,2141.818,0.0,,,Reject H0
+H5 Satisfaction: programme vs not,Welch t,0.186,0.8522953267927632,d=0.01,means 3.02 vs 3.01,Fail to reject H0

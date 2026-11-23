@@ -1,0 +1,579 @@
+{
+  "descriptive": {
+    "n_patients": 5000,
+    "n_visits": 24872,
+    "n_survey": 1500,
+    "cohort_to_2024": 3070,
+    "return_rate_h1_2025": 0.3762214983713355,
+    "mean_oop": 488.9905114184625,
+    "median_wait": 24.6,
+    "share_zero_plv": 0.601628664495114
+  },
+  "inferential": [
+    {
+      "Hypothesis": "H1 Spend 2024: programme vs not",
+      "Test": "Welch t",
+      "Statistic": 5.627,
+      "p-value": 2.7579755263254463e-08,
+      "Effect size": "d=0.37",
+      "Detail": "means 1818 vs 1087",
+      "Decision (alpha=0.05)": "Reject H0"
+    },
+    {
+      "Hypothesis": "H1 (robustness)",
+      "Test": "Mann-Whitney U",
+      "Statistic": 246922.5,
+      "p-value": 2.8946128672261047e-08,
+      "Effect size": "",
+      "Detail": "medians 816 vs 302",
+      "Decision (alpha=0.05)": "Reject H0"
+    },
+    {
+      "Hypothesis": "H2 Returned x insurance",
+      "Test": "Chi-square (df=1)",
+      "Statistic": 1.583,
+      "p-value": 0.20826444560888566,
+      "Effect size": "V=0.02",
+      "Detail": "return % {'No': 36.1, 'Yes': 38.4}",
+      "Decision (alpha=0.05)": "Fail to reject H0"
+    },
+    {
+      "Hypothesis": "H3 Returned x channel",
+      "Test": "Chi-square (df=2)",
+      "Statistic": 0.25,
+      "p-value": 0.8823131360156886,
+      "Effect size": "V=0.01",
+      "Detail": "return % {'Online': 37.6, 'Referral': 37.0, 'Walk-in': 38.0}",
+      "Decision (alpha=0.05)": "Fail to reject H0"
+    },
+    {
+      "Hypothesis": "H2b Returned x chronic",
+      "Test": "Chi-square (df=1)",
+      "Statistic": 72.456,
+      "p-value": 1.7077895487797005e-17,
+      "Effect size": "V=0.15",
+      "Detail": "return % {'No': 32.6, 'Yes': 48.7}",
+      "Decision (alpha=0.05)": "Reject H0"
+    },
+    {
+      "Hypothesis": "H4 Wait time across departments",
+      "Test": "One-way ANOVA",
+      "Statistic": 491.582,
+      "p-value": 0.0,
+      "Effect size": "eta2=0.073",
+      "Detail": "Levene p=6.43e-92",
+      "Decision (alpha=0.05)": "Reject H0"
+    },
+    {
+      "Hypothesis": "H4 (robustness)",
+      "Test": "Kruskal-Wallis",
+      "Statistic": 2141.818,
+      "p-value": 0.0,
+      "Effect size": "",
+      "Detail": "",
+      "Decision (alpha=0.05)": "Reject H0"
+    },
+    {
+      "Hypothesis": "H5 Satisfaction: programme vs not",
+      "Test": "Welch t",
+      "Statistic": 0.186,
+      "p-value": 0.8522953267927632,
+      "Effect size": "d=0.01",
+      "Detail": "means 3.02 vs 3.01",
+      "Decision (alpha=0.05)": "Fail to reject H0"
+    }
+  ],
+  "regression": {
+    "diagnostics": {
+      "part1_pseudo_R2": 0.4103385229496883,
+      "part1_LLR_p": 6.869439728935605e-283,
+      "part2_R2": 0.2893451537411508,
+      "part2_adj_R2": 0.2805079950311963,
+      "part2_F_p": 3.601879513866337e-66,
+      "part2_n": 978,
+      "breusch_pagan_p": 0.042550420804695836,
+      "jarque_bera_p": 2.608195295521742e-12,
+      "resid_skew": -0.5720735654407298,
+      "durbin_watson": 2.0031103532962007,
+      "max_vif": 3.892277326852723,
+      "smearing_factor": 1.3371928551136605
+    },
+    "comparison": {
+      "Mean baseline": {
+        "RMSE": 1835.646,
+        "MAE": 1277.87,
+        "R2": -0.002,
+        "Spearman_rho": NaN
+      },
+      "Two-part model": {
+        "RMSE": 1421.869,
+        "MAE": 793.623,
+        "R2": 0.399,
+        "Spearman_rho": 0.672
+      },
+      "Random Forest": {
+        "RMSE": 1428.479,
+        "MAE": 800.108,
+        "R2": 0.393,
+        "Spearman_rho": 0.693
+      }
+    },
+    "decile_lift": {
+      "1": 0.0,
+      "2": 7.0,
+      "3": 100.0,
+      "4": 161.0,
+      "5": 316.0,
+      "6": 662.0,
+      "7": 1258.0,
+      "8": 1675.0,
+      "9": 1898.0,
+      "10": 3925.0
+    },
+    "part1": {
+      "Intercept": {
+        "coef": 0.2169,
+        "se": 0.8872,
+        "z": 0.2445,
+        "p_value": 0.8068,
+        "ci_low": -1.522,
+        "ci_high": 1.9558,
+        "odds_ratio": 1.2422
+      },
+      "C(gender)[T.Male]": {
+        "coef": 0.0655,
+        "se": 0.1136,
+        "z": 0.5764,
+        "p_value": 0.5643,
+        "ci_low": -0.1571,
+        "ci_high": 0.2881,
+        "odds_ratio": 1.0677
+      },
+      "C(insurance)[T.Yes]": {
+        "coef": 0.2576,
+        "se": 0.1344,
+        "z": 1.9167,
+        "p_value": 0.0553,
+        "ci_low": -0.0058,
+        "ci_high": 0.5211,
+        "odds_ratio": 1.2939
+      },
+      "C(chronic_condition)[T.Yes]": {
+        "coef": 0.3241,
+        "se": 0.1403,
+        "z": 2.3102,
+        "p_value": 0.0209,
+        "ci_low": 0.0491,
+        "ci_high": 0.5991,
+        "odds_ratio": 1.3828
+      },
+      "C(care_programme)[T.Yes]": {
+        "coef": 0.2927,
+        "se": 0.1254,
+        "z": 2.3341,
+        "p_value": 0.0196,
+        "ci_low": 0.0469,
+        "ci_high": 0.5385,
+        "odds_ratio": 1.3401
+      },
+      "C(acquisition_channel)[T.Referral]": {
+        "coef": -0.1322,
+        "se": 0.1564,
+        "z": -0.8454,
+        "p_value": 0.3979,
+        "ci_low": -0.4386,
+        "ci_high": 0.1743,
+        "odds_ratio": 0.8762
+      },
+      "C(acquisition_channel)[T.Walk-in]": {
+        "coef": -0.1375,
+        "se": 0.1417,
+        "z": -0.9705,
+        "p_value": 0.3318,
+        "ci_low": -0.4153,
+        "ci_high": 0.1402,
+        "odds_ratio": 0.8715
+      },
+      "age": {
+        "coef": 0.0002,
+        "se": 0.0042,
+        "z": 0.0562,
+        "p_value": 0.9552,
+        "ci_low": -0.0079,
+        "ci_high": 0.0084,
+        "odds_ratio": 1.0002
+      },
+      "log_frequency": {
+        "coef": -0.1716,
+        "se": 0.1268,
+        "z": -1.3531,
+        "p_value": 0.176,
+        "ci_low": -0.4201,
+        "ci_high": 0.077,
+        "odds_ratio": 0.8423
+      },
+      "log_avg_spend": {
+        "coef": 0.157,
+        "se": 0.1308,
+        "z": 1.2002,
+        "p_value": 0.2301,
+        "ci_low": -0.0994,
+        "ci_high": 0.4134,
+        "odds_ratio": 1.17
+      },
+      "recency_months": {
+        "coef": -0.4926,
+        "se": 0.0265,
+        "z": -18.6008,
+        "p_value": 0.0,
+        "ci_low": -0.5445,
+        "ci_high": -0.4407,
+        "odds_ratio": 0.611
+      },
+      "tenure_months": {
+        "coef": 0.0382,
+        "se": 0.017,
+        "z": 2.2443,
+        "p_value": 0.0248,
+        "ci_low": 0.0048,
+        "ci_high": 0.0716,
+        "odds_ratio": 1.039
+      },
+      "avg_wait": {
+        "coef": -0.0003,
+        "se": 0.0038,
+        "z": -0.0766,
+        "p_value": 0.9389,
+        "ci_low": -0.0077,
+        "ci_high": 0.0071,
+        "odds_ratio": 0.9997
+      }
+    },
+    "part2": {
+      "Intercept": {
+        "coef": 4.4167,
+        "se": 0.4592,
+        "z": 9.6186,
+        "p_value": 0.0,
+        "ci_low": 3.5168,
+        "ci_high": 5.3167,
+        "pct_effect": 8182.6227
+      },
+      "C(gender)[T.Male]": {
+        "coef": -0.0273,
+        "se": 0.0546,
+        "z": -0.5001,
+        "p_value": 0.617,
+        "ci_low": -0.1343,
+        "ci_high": 0.0797,
+        "pct_effect": -2.6943
+      },
+      "C(insurance)[T.Yes]": {
+        "coef": -0.2838,
+        "se": 0.0695,
+        "z": -4.0808,
+        "p_value": 0.0,
+        "ci_low": -0.4201,
+        "ci_high": -0.1475,
+        "pct_effect": -24.7067
+      },
+      "C(chronic_condition)[T.Yes]": {
+        "coef": 0.5551,
+        "se": 0.0658,
+        "z": 8.4377,
+        "p_value": 0.0,
+        "ci_low": 0.4262,
+        "ci_high": 0.6841,
+        "pct_effect": 74.2144
+      },
+      "C(care_programme)[T.Yes]": {
+        "coef": 0.2638,
+        "se": 0.0573,
+        "z": 4.6014,
+        "p_value": 0.0,
+        "ci_low": 0.1515,
+        "ci_high": 0.3762,
+        "pct_effect": 30.1921
+      },
+      "C(acquisition_channel)[T.Referral]": {
+        "coef": 0.0179,
+        "se": 0.079,
+        "z": 0.2264,
+        "p_value": 0.8209,
+        "ci_low": -0.1369,
+        "ci_high": 0.1727,
+        "pct_effect": 1.8042
+      },
+      "C(acquisition_channel)[T.Walk-in]": {
+        "coef": 0.0941,
+        "se": 0.0706,
+        "z": 1.3327,
+        "p_value": 0.1826,
+        "ci_low": -0.0443,
+        "ci_high": 0.2326,
+        "pct_effect": 9.8706
+      },
+      "age": {
+        "coef": 0.0046,
+        "se": 0.002,
+        "z": 2.3192,
+        "p_value": 0.0204,
+        "ci_low": 0.0007,
+        "ci_high": 0.0085,
+        "pct_effect": 0.4594
+      },
+      "log_frequency": {
+        "coef": 0.2438,
+        "se": 0.0603,
+        "z": 4.041,
+        "p_value": 0.0001,
+        "ci_low": 0.1255,
+        "ci_high": 0.362,
+        "pct_effect": 27.6038
+      },
+      "log_avg_spend": {
+        "coef": 0.4102,
+        "se": 0.0677,
+        "z": 6.0626,
+        "p_value": 0.0,
+        "ci_low": 0.2776,
+        "ci_high": 0.5428,
+        "pct_effect": 50.7079
+      },
+      "recency_months": {
+        "coef": 0.0209,
+        "se": 0.0146,
+        "z": 1.4296,
+        "p_value": 0.1528,
+        "ci_low": -0.0078,
+        "ci_high": 0.0495,
+        "pct_effect": 2.1108
+      },
+      "tenure_months": {
+        "coef": -0.0315,
+        "se": 0.0078,
+        "z": -4.0162,
+        "p_value": 0.0001,
+        "ci_low": -0.0468,
+        "ci_high": -0.0161,
+        "pct_effect": -3.0977
+      },
+      "avg_wait": {
+        "coef": -0.0011,
+        "se": 0.0018,
+        "z": -0.607,
+        "p_value": 0.5439,
+        "ci_low": -0.0046,
+        "ci_high": 0.0024,
+        "pct_effect": -0.1094
+      }
+    }
+  },
+  "sem": {
+    "fit": {
+      "chi2": 157.80807654786844,
+      "df": 159.0,
+      "chi2_p": 0.5118022065396399,
+      "CFI": 1.000113699348788,
+      "TLI": 1.0001358671463505,
+      "RMSEA": 0.0,
+      "GFI": 0.9852144324213943,
+      "AGFI": 0.9823317116985215,
+      "r2_SAT": 0.4851633886637895,
+      "r2_LOY": 0.47911104472682997,
+      "n": 1500
+    },
+    "model_comparison": {
+      "Six-construct SEM": {
+        "chi2": 157.808,
+        "df": 159.0,
+        "CFI": 1.0,
+        "TLI": 1.0,
+        "RMSEA": 0.0
+      },
+      "Single factor": {
+        "chi2": 5368.263,
+        "df": 170.0,
+        "CFI": 0.504,
+        "TLI": 0.446,
+        "RMSEA": 0.143
+      }
+    },
+    "reliability": {
+      "SQ": {
+        "alpha": 0.82,
+        "CR": 0.821,
+        "AVE": 0.536,
+        "min_loading": 0.663
+      },
+      "DC": {
+        "alpha": 0.824,
+        "CR": 0.826,
+        "AVE": 0.544,
+        "min_loading": 0.67
+      },
+      "AC": {
+        "alpha": 0.735,
+        "CR": 0.736,
+        "AVE": 0.483,
+        "min_loading": 0.645
+      },
+      "PF": {
+        "alpha": 0.769,
+        "CR": 0.771,
+        "AVE": 0.531,
+        "min_loading": 0.666
+      },
+      "SAT": {
+        "alpha": 0.822,
+        "CR": 0.822,
+        "AVE": 0.607,
+        "min_loading": 0.759
+      },
+      "LOY": {
+        "alpha": 0.775,
+        "CR": 0.776,
+        "AVE": 0.537,
+        "min_loading": 0.673
+      }
+    },
+    "paths": [
+      {
+        "lval": "SAT",
+        "rval": "SQ",
+        "estimate": 0.3625,
+        "std_est": 0.3467,
+        "se": 0.0326,
+        "p_value": 0.0
+      },
+      {
+        "lval": "SAT",
+        "rval": "DC",
+        "estimate": 0.368,
+        "std_est": 0.3661,
+        "se": 0.0312,
+        "p_value": 0.0
+      },
+      {
+        "lval": "SAT",
+        "rval": "AC",
+        "estimate": 0.2988,
+        "std_est": 0.2692,
+        "se": 0.0317,
+        "p_value": 0.0
+      },
+      {
+        "lval": "SAT",
+        "rval": "PF",
+        "estimate": 0.2235,
+        "std_est": 0.219,
+        "se": 0.0276,
+        "p_value": 0.0
+      },
+      {
+        "lval": "LOY",
+        "rval": "SAT",
+        "estimate": 0.6776,
+        "std_est": 0.6922,
+        "se": 0.0323,
+        "p_value": 0.0
+      }
+    ],
+    "bridge": {
+      "n": 1028,
+      "OR_per_SD_loyalty": 1.6032694437627035,
+      "p_value": 1.3195666114880318e-07
+    }
+  },
+  "forecast": {
+    "adf": {
+      "level_p": 0.3742299854730471,
+      "diff1_p": 3.5610450309292385e-28
+    },
+    "order": [
+      2,
+      1,
+      1
+    ],
+    "aic": 1294.7457648461368,
+    "ljung_box_p": {
+      "10": 0.8984539935836446,
+      "20": 0.9931263948737441
+    },
+    "comparison": {
+      "ARIMA(2,1,1) + Fourier": {
+        "MAE": 16.19,
+        "RMSE": 19.18,
+        "MAPE_%": 5.75
+      },
+      "Holt-Winters (additive)": {
+        "MAE": 12.51,
+        "RMSE": 16.23,
+        "MAPE_%": 4.51
+      },
+      "Seasonal naive (t-52)": {
+        "MAE": 52.38,
+        "RMSE": 55.21,
+        "MAPE_%": 19.38
+      }
+    },
+    "interval_coverage_test": 1.0,
+    "n_weeks": 156,
+    "q1_2026_total": 4046.7999999999997
+  },
+  "ml": {
+    "comparison": {
+      "Logistic Regression": {
+        "CV AUC (mean)": 0.887,
+        "CV AUC (sd)": 0.006,
+        "Test AUC": 0.879,
+        "Accuracy": 0.805,
+        "Precision": 0.89,
+        "Sensitivity": 0.783,
+        "Specificity": 0.84,
+        "F1": 0.833
+      },
+      "Random Forest": {
+        "CV AUC (mean)": 0.885,
+        "CV AUC (sd)": 0.007,
+        "Test AUC": 0.878,
+        "Accuracy": 0.801,
+        "Precision": 0.868,
+        "Sensitivity": 0.804,
+        "Specificity": 0.797,
+        "F1": 0.835
+      },
+      "Gradient Boosting": {
+        "CV AUC (mean)": 0.876,
+        "CV AUC (sd)": 0.007,
+        "Test AUC": 0.868,
+        "Accuracy": 0.782,
+        "Precision": 0.851,
+        "Sensitivity": 0.789,
+        "Specificity": 0.771,
+        "F1": 0.818
+      },
+      "MLP Neural Network": {
+        "CV AUC (mean)": 0.879,
+        "CV AUC (sd)": 0.011,
+        "Test AUC": 0.859,
+        "Accuracy": 0.767,
+        "Precision": 0.853,
+        "Sensitivity": 0.757,
+        "Specificity": 0.784,
+        "F1": 0.802
+      }
+    },
+    "best_model": "Logistic Regression",
+    "churn_rate": 0.6237785016286646,
+    "n_train": 2456,
+    "n_test": 614,
+    "top_features": {
+      "recency_days": 0.3433,
+      "frequency": 0.0124,
+      "chronic_condition": 0.0061,
+      "care_programme": 0.003,
+      "monetary": 0.0029
+    }
+  }
+}

@@ -1,0 +1,15 @@
+,mean_auc_drop,sd
+acquisition_channel,-0.0021,0.0005
+avg_spend,-0.0005,0.0004
+n_departments,-0.0001,0.0006
+tenure_days,0.0,0.0014
+insurance,0.0,0.0001
+gender,0.0004,0.0005
+age,0.0005,0.0007
+main_department,0.0014,0.0023
+avg_wait,0.0014,0.0011
+monetary,0.0029,0.0018
+care_programme,0.003,0.0014
+chronic_condition,0.0061,0.0015
+frequency,0.0124,0.0038
+recency_days,0.3433,0.0271

@@ -1,0 +1,4 @@
+,RMSE,MAE,R2,Spearman_rho
+Mean baseline,1835.646,1277.87,-0.002,
+Two-part model,1421.869,793.623,0.399,0.672
+Random Forest,1428.479,800.108,0.393,0.693

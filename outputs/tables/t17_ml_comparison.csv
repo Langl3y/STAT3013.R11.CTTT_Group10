@@ -1,0 +1,5 @@
+Model,CV AUC (mean),CV AUC (sd),Test AUC,Accuracy,Precision,Sensitivity,Specificity,F1
+Logistic Regression,0.887,0.006,0.879,0.805,0.89,0.783,0.84,0.833
+Random Forest,0.885,0.007,0.878,0.801,0.868,0.804,0.797,0.835
+Gradient Boosting,0.876,0.007,0.868,0.782,0.851,0.789,0.771,0.818
+MLP Neural Network,0.879,0.011,0.859,0.767,0.853,0.757,0.784,0.802

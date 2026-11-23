@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.DS_Store
+.idea/
+.ipynb_checkpoints/
+outputs_run.log
+*.aux
+*.log
+*.out
