@@ -33,11 +33,11 @@ COVER = {
     "class_code": "STAT3013.R11.CTTT",
     "course_name": "Statistical Analysis (Phân tích thống kê)",
     "instructor": "Nguyen Minh Nhut",
-    "group": "10",                                # TODO: confirm with class monitor
+    "group": "10",
     "member": ("Ho Van Hieu", "19521497", "Leader"),
     "duration": "05/10/2026 - 28/11/2026",        # TODO: confirm dates
 }
-HIGHLIGHT = {"duration", "group"}  # values still to be confirmed
+HIGHLIGHT = {"duration"}  # values still to be confirmed
 
 
 # ----------------------------------------------------------------- helpers

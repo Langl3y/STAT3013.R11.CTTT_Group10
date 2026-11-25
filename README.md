@@ -1,6 +1,6 @@
 # ClinicAnalytics — Statistics and ML for Patient Value, Satisfaction and Retention in a Private Clinic
 
-STAT3013 course project (2026): *Statistical Analysis (Phân tích thống kê)*, instructor Nguyen Minh Nhut. Class `R11.CTTT`, Group `Group10` (group number to be confirmed).
+STAT3013 course project (2026): *Statistical Analysis (Phân tích thống kê)*, instructor Nguyen Minh Nhut. Class `R11.CTTT`, Group `Group10`.
 
 > **Data notice.** All data in this repository is **simulated**, as the course brief allows. Nothing here describes real patients.
 > Because we wrote the data-generating process ourselves (`src/simulate.py`), the true effects are known,
