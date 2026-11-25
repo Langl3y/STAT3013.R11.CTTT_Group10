@@ -31,13 +31,13 @@ COVER = {
     "topic": "STATISTICAL AND MACHINE LEARNING ANALYTICS FOR PATIENT VALUE, "
              "SATISFACTION AND RETENTION IN A PRIVATE OUTPATIENT CLINIC",
     "class_code": "STAT3013.R11.CTTT",
-    "course_name": "<Name of course>",            # TODO: fill in, then remove highlight
-    "instructor": "<Name of your instructor>",    # TODO
+    "course_name": "Statistical Analysis (Phân tích thống kê)",
+    "instructor": "Nguyen Minh Nhut",
     "group": "10",                                # TODO: confirm with class monitor
     "member": ("Ho Van Hieu", "19521497", "Leader"),
     "duration": "05/10/2026 - 28/11/2026",        # TODO: confirm dates
 }
-HIGHLIGHT = {"course_name", "instructor", "duration", "group"}  # values still to be confirmed
+HIGHLIGHT = {"duration", "group"}  # values still to be confirmed
 
 
 # ----------------------------------------------------------------- helpers
@@ -250,7 +250,7 @@ def edit_cover(doc):
 
     for p in doc.sections[0].header.paragraphs:
         if "Course name" in p.text:
-            set_runs(p, [(f"Project Report for {c['class_code']}", None, False), ("\t\t", None, False),
+            set_runs(p, [(f"Project Report for Statistical Analysis ({c['class_code']})", None, False), ("\t", None, False),
                          (f"Group {c['group']}", None, False)])
 
 

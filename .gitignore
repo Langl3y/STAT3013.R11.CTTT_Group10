@@ -14,3 +14,4 @@ report/out/
 slides/node_modules/
 slides/package-lock.json
 deliverables/
+slides/out/

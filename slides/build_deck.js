@@ -95,7 +95,7 @@ async function main() {
   s.addShape(pres.shapes.OVAL, { x: MX, y: 0.55, w: 1.25, h: 1.25, fill: { color: C.background1 }, line: { color: C.background1 }, objectName: "logo-circle" });
   s.addImage({ path: LOGO, x: MX + 0.17, y: 0.72, w: 0.91, h: 0.736, objectName: "uit-logo" });
   s.addText([{ text: "UNIVERSITY OF INFORMATION TECHNOLOGY, VNU-HCM", options: { bold: true, breakLine: true } },
-             { text: "STAT3013 Final Project  ·  Class STAT3013.R11.CTTT  ·  Group 10" }],
+             { text: "Statistical Analysis (STAT3013.R11.CTTT)  ·  Instructor: Nguyen Minh Nhut  ·  Group 10" }],
     { x: 2.1, y: 0.75, w: 9, h: 0.85, fontSize: 14, color: C.background1, margin: 0, isTextBox: true, objectName: "header" });
   s.addText("Statistical & Machine Learning Analytics for a Private Outpatient Clinic", { placeholder: "title" });
   s.addText("Patient value  ·  Satisfaction  ·  Retention  ·  Demand", { placeholder: "body" });
