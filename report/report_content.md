@@ -769,7 +769,7 @@ REF: L. Grinsztajn, E. Oyallon, and G. Varoquaux, "Why do tree-based models stil
 ## A. Source code, dataset and demo video.
 
 - GitHub repository: https://github.com/Langl3y/STAT3013.R11.CTTT_Group10
-- Dataset: the `data/` folder of the repository (also archived on cloud storage: <ADD LINK>)
+- Dataset: https://github.com/Langl3y/STAT3013.R11.CTTT_Group10/tree/main/data
 - Demo video (15 minutes): <ADD LINK>
 
 ## B. Plagiarism check report.

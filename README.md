@@ -61,7 +61,7 @@ To run a single stage, run e.g. `python s4_sem.py` from inside `src/`.
 
 ## Links
 
-- Dataset: `data/` in this repository (also archived at: <ADD CLOUD LINK>)
+- Dataset: [`data/`](data/) in this repository
 - Demo video (15 min): <ADD CLOUD LINK>
 - Full report and IEEE paper: submitted on the course system
 
